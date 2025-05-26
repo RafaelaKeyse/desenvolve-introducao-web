@@ -1,0 +1,32 @@
+/* Exercício 1 - Links */
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:hover {
+   color: #1fdd7e;
+}
+
+/* Exercício 2 - Parágrafos */
+p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+h1 + p {
+  font-weight: bold;
+}
+
+/* Exercício 3 - Classe Destaque */
+.destaque {
+  font-family: Arial, sans-serif;
+}
+
+p.destaque {
+  font-weight: bold;
+}
+
+strong.destaque {
+  color: red;
+}
