@@ -1,0 +1,14 @@
+/* Color Theme Swatches in Hex */
+/*
+--principal: #F2133C;
+  --background: #2E4A3D;
+  --fashion-3: #0F698C;
+  --fashion-4: #0D758C; 
+  --destaque: #F2B9AC;
+  --texto: #F2EFEA;
+ */
+ 
+ html {
+  background: #2E4A3D;
+  color:  #F2EFEA;
+ }
