@@ -1,0 +1,38 @@
+/* Color Theme Swatches in Hex */
+/*
+--principal: #F2133C;
+  --background: #2E4A3D;
+  --fashion-3: #0F698C;
+  --fashion-4: #0D758C; 
+  --destaque: #F2B9AC;
+  --texto: #F2EFEA;
+ */
+ 
+ html {
+  background: #2E4A3D;
+  color:  #F2EFEA;
+  
+  font-size: 18px;
+  font-family: Helvetica, sans-serif;
+ }
+
+ p {
+  text-indent: 1em;
+}
+
+h1, h2, h3 {
+  text-align: center; 
+
+}
+
+ h1 {font-size: 1.8rem;} 
+ h2 {font-size: 1.4rem;}
+ h3 {font-size: 1.2rem;}
+
+ .summary { text-align: right; }
+ #zen-supporting p {
+  line-height: 1.5;
+}
+
+
+ abbr {font-variant: small-caps}
