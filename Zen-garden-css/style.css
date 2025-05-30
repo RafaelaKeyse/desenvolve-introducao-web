@@ -1,0 +1,425 @@
+/* ===== Etapa 1 - Estrutura inicial e paleta de cores! =====
+ Vamos iniciar a construção da nossa versão do CSS Zen Garden!
+
+1. Crie uma pasta para o projeto do CSS Zen Garden, e baixe a página HTML 
+   para este diretório.
+
+2. Crie um arquivo chamado style.css no diretório do seu projeto, e o inclua 
+   na página HTML.
+
+3. Defina uma paleta de cores que você irá trabalhar.
+   Essa paleta deverá ter pelo menos três cores: 
+   - uma cor de fundo, 
+   - uma cor para fonte, 
+   - e uma cor de destaque.
+========================================*/
+
+
+/* Color Theme Swatches in Hex */
+/*
+  --principal: #F2133C;
+  --background: #2E4A3D;
+  --fashion-3: #0F698C;
+  --fashion-4: #0D758C; 
+  --destaque: #F2B9AC;
+  --texto: #F2EFEA;
+ */
+ 
+ html {
+  background: #2E4A3D;
+  color:  #F2EFEA;
+  
+  /* ===== Etapa 2 - Estilos aplicados =====
+1. Aspectos gerais. Aplique os seguintes estilos à estrutura geral da página:
+   - Defina um tamanho fixo para a página inteira
+   - Defina uma fonte do tipo sans-serif para a página inteira
+   - Indente os parágrafos em 1em
+
+2. Títulos:
+   - Alinhe todos os títulos para o centro ou à direita
+   - h1 com tamanho 1.8rem
+   - h2 com tamanho 1.4rem
+   - h3 com tamanho 1.2rem
+
+3. Seções de resumo e principal:
+   - Alinhamento à direita ou centralizado para a seção de resumo
+   - Espaçamento entre as linhas de 1.5 para os parágrafos da seção principal
+
+4. Abreviaturas:
+   - Fonte com estilo small-caps
+======================================== */
+  font-size: 18px;
+  font-family: Helvetica, sans-serif;
+ }
+
+ p {
+  text-indent: 1em;
+}
+
+h1, h2, h3 {
+  text-align: center; 
+
+}
+
+ h1 {font-size: 1.8rem;} 
+ h2 {font-size: 1.4rem;}
+ h3 {font-size: 1.2rem;}
+
+ .summary { text-align: right; }
+ .main p {line-height: 1.5;}
+
+ abbr {font-variant: small-caps}
+
+ /* ===== Etapa 3 - Exercícios: Box Model =====
+
+1. Diretrizes gerais para a página:
+- Defina a largura geral da página em 80%, limitada a no máximo 1280px.
+- Centralize a página na tela.
+- Defina a altura da seção de introdução em 550px.
+- Remova o container #design-archives da renderização da página.
+
+2. Cabeçalho da página:
+- Inverta as cores do cabeçalho: fundo escuro e fonte clara.
+- Exiba título e subtítulo lado a lado, com espaçamento adequado.
+- Adicione espaçamento lateral de 1em ao título principal.
+
+3. Menus laterais:
+- Remova bullets dos itens de menu.
+- Aumente espaçamento entre itens para ao menos 1em.
+- Centralize os itens de cada menu.
+
+4. Rodapé:
+- Adicione 4% de margem externa (espaçamento fora) ao rodapé.
+- Transforme os links do rodapé em caixas:
+    - Adicione borda sólida de 2px.
+    - Adicione 0.5em de padding interno.
+
+============================================= */
+
+/* ===== Etapa 3 - Exercícios: Box Model =====
+
+1. Diretrizes gerais para a página:
+- Defina a largura geral da página em 80%, limitada a no máximo 1280px.
+- Centralize a página na tela.
+- Defina a altura da seção de introdução em 550px.
+- Remova o container #design-archives da renderização da página.
+
+2. Cabeçalho da página:
+- Inverta as cores do cabeçalho: fundo escuro e fonte clara.
+- Exiba título e subtítulo lado a lado, com espaçamento adequado.
+- Adicione espaçamento lateral de 1em ao título principal.
+
+3. Menus laterais:
+- Remova bullets dos itens de menu.
+- Aumente espaçamento entre itens para ao menos 1em.
+- Centralize os itens de cada menu.
+
+4. Rodapé:
+- Adicione 4% de margem externa (espaçamento fora) ao rodapé.
+- Transforme os links do rodapé em caixas:
+    - Adicione borda sólida de 2px.
+    - Adicione 0.5em de padding interno.
+
+============================================= */
+
+#page-wrapper {
+  width: 80%;
+  max-width: 1280px;
+  margin: 0 auto; 
+}
+
+#zen-intro {
+  height: 550px;
+}
+
+#design-archives {
+  display: none;
+}
+
+#zen-intro header {
+  background-color: #F2EFEA;
+  color: #2E4A3D;           
+  padding: 1em;            
+}
+
+#zen-intro header h1, 
+#zen-intro header h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 1rem; 
+}
+
+#zen-intro header h1 {
+  margin-left: 1em;
+}
+
+aside ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin: 1em 0;
+  text-align: center;
+}
+
+.main footer {
+  margin: 4%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.main footer a {
+  border: 2px solid #F2EFEA;
+  padding: 0.5em;
+  color: inherit;
+  text-decoration: none;
+}
+/* ===== Etapa 4 - Posicionamento dos Elementos =====
+
+1. Tornar .page-wrapper o elemento de referência para posicionamento relativo.
+
+2. .explanation:
+   - Ocupar 60% da largura disponível.
+   - Adicionar uma margem direita de 35%.
+   - Adicionar borda à direita de 1px com a cor #1f295c.
+   - Adicionar padding à direita de 2%.
+
+3. #design-selection:
+   - Posicionar à direita, ocupando o espaço deixado pela .explanation.
+   - Começar após a introdução (top: 560px).
+   - Posicionar à direita da .explanation (left: 62%).
+   - Adicionar padding horizontal de 2% para centralizar o conteúdo.
+
+====================================================== */
+
+.page-wrapper {
+  position: relative;
+}
+
+.explanation {
+  width: 60%;
+  margin-right: 35%;
+  border-right: 1px solid #1f295c;
+  padding-right: 2%;
+}
+
+
+/* ===== Etapa 5 - Exercícios: Flexbox =====
+
+1. Rodapé da seção principal:
+- Aplicar Flexbox no rodapé.
+- Centralizar os links e espaçá-los igualmente.
+- Garantir mesmo tamanho para os links.
+- Tratar quebra de linha.
+
+2. Seção de Benefícios:
+- Layout com Flexbox: texto à esquerda (70%), título à direita (30%).
+- Título centralizado verticalmente.
+
+3. Seção de Participação:
+- Cada item ocupa 50% do espaço disponível.
+- Título centralizado verticalmente.
+
+4. Bordas decorativas:
+- Adicionar linha no topo e embaixo das seções de benefícios e participação.
+- Evitar borda duplicada entre as seções (removendo uma das bordas).
+
+========================================= */
+
+/* ===== Etapa 5 - Exercícios: Flexbox ===== */
+
+/* ===== Etapa 5 - Exercícios: Flexbox ===== */
+
+/* ===== Etapa 5 - Exercícios: Flexbox ===== */
+
+.supporting footer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#design-selection {
+  position: absolute;
+  top: 500px;
+  left: 62%;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.supporting footer a {
+  flex: 1 1 100px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.benefits {
+  display: flex;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  padding: 20px 0;
+}
+
+.benefits p {
+  flex-basis: 70%;
+}
+
+.benefits h3 {
+  flex-basis: 30%;
+  align-self: center;
+  text-align: center;
+}
+
+.participation {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  padding: 20px 0;
+}
+
+.participation h3,
+.participation p {
+  flex-basis: 50%;
+}
+
+.participation h3 {
+  align-self: center;
+  text-align: center;
+}
+
+/* ===== Etapa 6 - Exercícios: Pseudo-classes =====
+
+1. Estilização de Links:
+- Os links, por padrão, devem:
+  - Ter a cor de destaque do site.
+  - Estar em negrito.
+
+- Quando o mouse passar sobre eles (hover), a cor deve mudar para uma tonalidade mais clara ou mais escura da cor original.
+
+- Os links que já foram visitados devem:
+  - Deixar de estar em negrito.
+
+2. Primeira Letra do Primeiro Parágrafo da Seção Principal:
+- A primeira letra do primeiro parágrafo dentro da tag <main> deve:
+  - Ter o tamanho da fonte 3 vezes maior que o tamanho padrão.
+  - Usar uma fonte diferente da utilizada no restante do site.
+  - Estar flutuando à esquerda.
+
+- Dica: será necessário usar mais de um pseudo-seletor para atingir esse objetivo.
+
+3. Separador com Bordas no Menu de Design:
+- Em um menu de navegação com a classe .menu-design:
+  - Todos os itens da lista (<li>) devem receber uma borda superior.
+  - Apenas o último item da lista deve receber uma borda inferior, criando o efeito de um separador visual.
+
+=============================================== */
+
+a {
+  color: #F2B9AC;         
+}
+
+a:hover {
+  color: #f2b9ac98;        
+}
+
+.main p:first-of-type::first-letter {
+  font-size: 3rem;
+  font-family: 'Times New Roman', Times, serif;
+  float: left;
+}
+
+.design-selection li {
+  border-top: 1px solid #ccc;
+}
+
+.design-selection li:last-of-type {
+  border-bottom: 1px solid #ccc;
+}
+
+/* ===== Etapa 7 - Exercícios: Media Query =====
+
+Objetivo: tornar a página responsiva para dispositivos móveis e otimizada para impressão.
+
+--------------------------
+1. Layout Mobile (telas menores que 768px)
+--------------------------
+
+- Criar uma media query para telas com largura inferior a 768 pixels.
+- Este será o layout mobile do site.
+
+Dentro dessa media query, aplicar as seguintes modificações:
+
+  a) Remover o reposicionamento do menu de design:
+     - O menu deve voltar à sua posição padrão no fluxo da página.
+
+  b) Remover a borda lateral de qualquer div lateral (como barras laterais).
+
+  c) Ajustar Flexbox para layout vertical:
+     - Mudar a orientação dos elementos para coluna.
+     - Os itens devem ser empilhados verticalmente.
+
+  d) Remover a altura fixa do cabeçalho:
+     - O cabeçalho deve se ajustar dinamicamente ao conteúdo.
+
+  e) Remover o espaçamento inicial dos parágrafos:
+     - Eliminar o recuo dado com `text-indent`.
+
+--------------------------
+2. Estilos para Impressão (media print)
+--------------------------
+
+- Criar uma media query específica para meios de impressão.
+
+Aplicar as seguintes modificações:
+
+  a) Alterar a fonte para uma serifada:
+     - Exemplo: "Times New Roman", para facilitar a leitura em papel.
+
+  b) Inverter as cores do banner:
+     - O fundo deve ficar claro (ex: branco).
+     - O texto deve ter cor escura (ex: preto), seguindo o padrão da página impressa.
+
+================================================= */
+
+@media screen and (max-width: 768px) {
+  #design-selection {
+    position: static;
+    width: 100%;
+  }
+  .explanation {
+    border-right: none;
+    width: 100%;
+  }
+  #zen-intro {
+  height: auto;
+}
+
+.participation {
+    flex-direction: column;
+}
+p{
+    text-indent: 0;
+}
+}
+
+@media print {
+  html {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+ #zen-intro header {
+    background-color: #F2EFEA; 
+    color: #2E4A3D;            
+}
+
+ #design-selection {
+    position: static;
+    width: 100%;
+  }
+  .explanation {
+    border-right: none;
+    width: 100%;
+  }
+  }
